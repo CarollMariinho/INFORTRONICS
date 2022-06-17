@@ -1,0 +1,51 @@
+﻿@model TesteInfortronics.Models.ModelExercicio4
+@{
+    ViewBag.Title = "Valor Perfeito";
+}
+
+<div class="jumbotron">
+    <h1>Exercício 4</h1>
+    <p class="lead">
+        Faça uma aplicação que verifique se um valor é perfeito ou não. Um valor
+        é dito perfeito quando ele é igual a soma dos seus divisores, exceto ele próprio.
+        (Ex: 6 é perfeito, 6 = 1 + 2 + 3, que são seus divisores) .
+    </p>
+
+</div>
+
+
+<div>
+    @using (Html.BeginForm("VerificaNumeroPerfeito", "Home", FormMethod.Post))
+    {
+        <label>Digite um número diferente de 0</label>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td>@Html.TextBoxFor(m => m.numero)</td>
+            </tr>
+            <tr>
+                <td><input type="submit" class="btn btn-info" style="margin-top:5px;" value="Submit"></td>
+            </tr>
+        </table>
+    }
+</div>
+
+<row>
+    @{
+        if (Model.numero != 0)
+        {
+            if (Model.valorPerfeito)
+            {
+                <label>Número Perfeito</label>
+            }
+            else
+            {
+                <label>Número não perfeito</label>
+            }
+
+        }
+    }    
+
+</row>
+
+
+

@@ -1,0 +1,73 @@
+﻿@model TesteInfortronics.Models.ModelExercicio5
+@{
+    ViewBag.Title = "Valor Perfeito";
+}
+
+<div class="jumbotron">
+    <h1>Exercício 5</h1>
+    <p class="lead">
+        Faça um programa que receba um número e usando laços de repetição
+        calcule e mostre a tabuada desse número
+    </p>
+
+</div>
+
+
+<div>
+    @using (Html.BeginForm("Tabuada", "Home", FormMethod.Post))
+    {
+        <label>Digite um número</label>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td>@Html.TextBoxFor(m => m.numero)</td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" class="btn btn-info" style="margin-top:5px;" value="Submit"></td>
+            </tr>
+        </table>
+    }
+    </div>
+
+<row>
+
+    <label>Tabuada</label>
+    <table class="table" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>@Model.numero * 1 = @(Model.numero * 1)</td>
+        </tr>
+        <tr>
+            <td>@Model.numero * 2 = @(Model.numero * 2)</td>
+        </tr>
+        <tr>
+            <td>@Model.numero * 3 = @(Model.numero * 3)</td>
+        </tr>
+        <tr>
+            <td>@Model.numero * 4 = @(Model.numero * 4)</td>
+        </tr>
+        <tr>
+            <td>@Model.numero * 5 = @(Model.numero * 5)</td>
+        </tr>
+        <tr>
+            <td>@Model.numero * 6 = @(Model.numero * 6)</td>
+        </tr>
+        <tr>
+            <td>@Model.numero * 7 = @(Model.numero * 7)</td>
+        </tr>
+        <tr>
+            <td>@Model.numero * 8 = @(Model.numero * 8)</td>
+        </tr>
+        <tr>
+            <td>@Model.numero * 9 = @(Model.numero * 9)</td>
+        </tr>
+        <tr>
+            <td>@Model.numero * 10 = @(Model.numero * 10)</td>
+        </tr>
+
+    </table>
+
+
+</row>
+
+
+

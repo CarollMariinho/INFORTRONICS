@@ -1,0 +1,39 @@
+﻿@model IList<TesteInfortronics.Models.ModelExercicio1>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Exercício 1</h1>
+    <p class="lead">
+        Crie uma aplicação que permita a digitação de números e mostre esses
+        números em tela de forma ordenada. Ou seja, desenvolver uma lógica que
+        deverá permitir a inclusão de n números em qualquer sequência e em seguida
+        exibi-los em ordem crescente.
+    </p>
+    
+</div>
+<div class="row">
+    
+    @Html.Action("AdicionaNumeroView", "Home")
+</div>
+
+<div class="row">
+
+    <label>Números</label>
+    @foreach (var n in Model)
+    {
+        <table class="table">
+            <tr>
+                <th>@n.numero</th>
+            </tr>
+        </table>
+    }
+
+    </div>
+
+<div class="row">
+    <input type="button" class="btn btn-info" value="Salvar" onclick="location.href='@Url.Action("SalvaListaJson", "Home")'" />
+    
+</div>
+

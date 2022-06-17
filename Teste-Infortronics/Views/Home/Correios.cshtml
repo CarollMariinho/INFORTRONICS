@@ -1,0 +1,46 @@
+﻿@model TesteInfortronics.Models.ModelExercicio3
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Exercício 3</h1>
+    <p class="lead">
+        Consuma o webservice dos correios passando um CEP qualquer e mostre
+        em tela o endereço que o mesmo retornar
+    </p>
+
+</div>
+
+
+<div>
+    @using (Html.BeginForm("AdicionaCEP", "Home", FormMethod.Post))
+    {
+        <label>Digite um CEP válido</label>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td>@Html.TextBoxFor(m => m.cep)</td>
+            </tr>
+            <tr>
+                <td><input type="submit" class="btn btn-info" style="margin-top:5px;" value="Submit"></td>
+            </tr>
+        </table>
+    }
+</div>
+
+<row>
+    <label>Endereço Completo</label>
+    <table class="table" cellpadding="0" cellspacing="0">
+        <tr>
+            <th>Cep: @Html.TextBoxFor(m => m.cep)</th>
+            <th>Endereço: @Html.TextBoxFor(m => m.endereco)</th>
+            <th>Bairro: @Html.TextBoxFor(m => m.bairro)</th>
+            <th>Cidade : @Html.TextBoxFor(m => m.cidade)</th>
+            <th>UF: @Html.TextBoxFor(m => m.UF)</th>
+        </tr>
+        
+    </table>
+</row>
+
+
+
